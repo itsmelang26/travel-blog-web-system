@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Escape</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #001f54;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Section Base */
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    section h1, section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    section p {
+      max-width: 800px;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Home Section */
+    #home {
+      background: url('images/hero.jpg') no-repeat center center/cover;
+    }
+
+   
+    
+
+    
+
+    /* Events Section */
+    #events {
+      background: url('festivals.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .event-card {
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+   
+    
+ 
+    
+  
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#discover">Discover Philippines</a></li>
+      <li><a href="#events">Events & Festivals</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>PARADISE ESCAPE</h1>
+    <p>Escape. Explore. Experience paradise!</p>
+  </section>
+
+  <!-- Discover Section -->
+
+     
+  
+
+  <!-- Events Section -->
+  <section id="events">
+    <h2>Events & Festivals in the Philippines</h2>
+    <p>Celebrate the vibrant culture of the Philippines through its world-famous festivals and colorful traditions!</p>
+    <div class="events-container">
+      <div class="event-card">
+        <img src="sinulog.jpg" alt="Sinulog Festival">
+        <h3>Sinulog Festival</h3>
+        <p>Held every January in Cebu City, honoring the Santo Niño with street dancing, parades, and vibrant costumes.</p>
+      </div>
+      <div class="event-card">
+        <img src="atiatihan.jpg" alt="Ati-Atihan Festival">
+        <h3>Ati-Atihan Festival</h3>
+        <p>Kalibo, Aklan’s January festival with tribal dances, colorful face paint, and lively drumbeats.</p>
+      </div>
+      <div class="event-card">
+        <img src="pahiyas.jpg" alt="Pahiyas Festival">
+        <h3>Pahiyas Festival</h3>
+        <p>Lucban, Quezon’s May festival showcasing homes decorated with fruits, vegetables, and handicrafts.</p>
+      </div>
+      <div class="event-card">
+        <img src="kadayawan.jpg" alt="Kadayawan Festival">
+        <h3>Kadayawan Festival</h3>
+        <p>Davao City’s August thanksgiving celebration with floral floats and street dancing.</p>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
+
