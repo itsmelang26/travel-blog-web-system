@@ -29,6 +29,7 @@ if (!$user) {
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
+    <?php include "../includes/header.php"; ?>
 <p>Place your DASHBOARD CODE HERE!</p>
 </body>
 </html>
