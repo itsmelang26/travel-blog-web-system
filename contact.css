@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #001f4d;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links li a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffcc00;
+}
+
+/* Contact Section */
+.contact-page {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+.contact-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.contact-info p {
+  font-size: 18px;
+}
+.contact-info a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Guide Cards */
+.guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.guide-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.guide-card:hover {
+  transform: scale(1.02);
+}
+.guide-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.guide-details {
+  padding: 20px;
+}
+.guide-details h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.guide-details p {
+  margin-bottom: 10px;
+}
+.guide-details a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.guide-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .nav-links li {
+    margin: 5px 0;
+  }
+}
