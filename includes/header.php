@@ -63,8 +63,8 @@
   <ul>
     <li><a href="../pages/dashboard.php">Home</a></li>
     <li><a href="../pages/discover-philippines.php">Discover Philippines</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="../pages/blog.php">Blog</a></li>
+    <li><a href="../pages/contact.php">Contact</a></li>
     <li><a href="../logout.php" class="logout">Logout</a></li>
   </ul>
 </nav>
