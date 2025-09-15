@@ -1,0 +1,160 @@
+/* General reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background image for auth pages */
+body.auth-page {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Center wrapper */
+.wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Card container */
+.card {
+  width: 100%;
+  max-width: 520px;
+  padding: 36px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.card h1.title {
+  margin: 0 0 18px;
+  font-size: 34px;
+}
+
+/* Forms */
+form {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.field {
+  position: relative;
+  margin: 12px 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Row inside form (remember/forgot) */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.forgot-link {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+/* Buttons */
+button.primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #1e6b3b;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggles {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Hidden form toggle */
+.hidden {
+  display: none;
+}
+
+/* Messages */
+.msg {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.msg.error {
+  background: rgba(255, 50, 50, 0.12);
+  color: #ffb3b3;
+}
+
+.msg.success {
+  background: rgba(100, 255, 150, 0.08);
+  color: #c8ffd8;
+}
+
+/* Register link under forms */
+.register-text {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+}
