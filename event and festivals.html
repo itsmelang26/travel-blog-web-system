@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Escape</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #001f54;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Section Base */
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    section h1, section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    section p {
+      max-width: 800px;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Home Section */
+    #home {
+      background: url('images/hero.jpg') no-repeat center center/cover;
+    }
+
+    /* Discover Section */
+    #discover {
+      background: url('images/discover-bg.jpg') no-repeat center center/cover;
+    }
+
+    .discover-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .discover-card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .discover-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .discover-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .discover-card h3 {
+      margin: 15px 0 5px;
+      color: #003399;
+    }
+
+    .discover-card p {
+      padding: 0 15px 20px;
+    }
+
+    /* Events Section */
+    #events {
+      background: url('festivals.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .event-card {
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* Blog Section */
+    #blog {
+      background: url('images/blog-bg.jpg') no-repeat center center/cover;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .blog-card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .blog-card h3 {
+      margin: 15px 0 5px;
+      color: #003399;
+    }
+
+    .blog-card p {
+      padding: 0 15px 20px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: url('images/contact-bg.jpg') no-repeat center center/cover;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 20px;
+      color: #003399;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      background: #003399;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #001f54;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#discover">Discover Philippines</a></li>
+      <li><a href="#events">Events & Festivals</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>PARADISE ESCAPE</h1>
+    <p>Escape. Explore. Experience paradise!</p>
+  </section>
+
+  <!-- Discover Section -->
+  <section id="discover">
+    <h2>Discover the Philippines</h2>
+    <p>From white sand beaches and majestic mountains to vibrant cities and cultural wonders, discover why the Philippines is truly paradise.</p>
+    <div class="discover-container">
+      <div class="discover-card">
+        <img src="images/boracay.jpg" alt="Boracay">
+        <h3>Boracay</h3>
+        <p>Famous for its powdery white sand and crystal-clear waters, Boracay is a beach lover’s dream.</p>
+      </div>
+      <div class="discover-card">
+        <img src="images/chocolate-hills.jpg" alt="Chocolate Hills">
+        <h3>Chocolate Hills</h3>
+        <p>Bohol’s iconic natural wonder with more than 1,200 perfectly cone-shaped hills.</p>
+      </div>
+      <div class="discover-card">
+        <img src="images/mayon.jpg" alt="Mayon Volcano">
+        <h3>Mayon Volcano</h3>
+        <p>Known as the “perfect cone,” Mayon Volcano is one of the most picturesque volcanoes in the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <h2>Events & Festivals in the Philippines</h2>
+    <p>Celebrate the vibrant culture of the Philippines through its world-famous festivals and colorful traditions!</p>
+    <div class="events-container">
+      <div class="event-card">
+        <img src="sinulog.jpg" alt="Sinulog Festival">
+        <h3>Sinulog Festival</h3>
+        <p>Held every January in Cebu City, honoring the Santo Niño with street dancing, parades, and vibrant costumes.</p>
+      </div>
+      <div class="event-card">
+        <img src="atiatihan.jpg" alt="Ati-Atihan Festival">
+        <h3>Ati-Atihan Festival</h3>
+        <p>Kalibo, Aklan’s January festival with tribal dances, colorful face paint, and lively drumbeats.</p>
+      </div>
+      <div class="event-card">
+        <img src="pahiyas.jpg" alt="Pahiyas Festival">
+        <h3>Pahiyas Festival</h3>
+        <p>Lucban, Quezon’s May festival showcasing homes decorated with fruits, vegetables, and handicrafts.</p>
+      </div>
+      <div class="event-card">
+        <img src="kadayawan.jpg" alt="Kadayawan Festival">
+        <h3>Kadayawan Festival</h3>
+        <p>Davao City’s August thanksgiving celebration with floral floats and street dancing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>Travel Blog</h2>
+    <p>Read inspiring travel stories, guides, and tips about exploring the Philippines from locals and travelers alike.</p>
+    <div class="blog-container">
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Beach Adventure">
+        <h3>Beach Adventures</h3>
+        <p>Discover hidden beaches and islands where you can relax and enjoy pristine nature.</p>
+      </div>
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Mountain Hike">
+        <h3>Mountain Hiking</h3>
+        <p>Experience breathtaking views from the peaks of the Philippines’ famous mountains.</p>
+      </div>
+      <div class="blog-card">
+        <img src="images/blog3.jpg" alt="Cultural Experience">
+        <h3>Cultural Experiences</h3>
+        <p>Immerse yourself in the rich traditions and hospitality of Filipino communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need travel recommendations? Get in touch with us and let’s plan your paradise escape together.</p>
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
