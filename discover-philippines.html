@@ -1,26 +1,3 @@
-<?php
-session_start();
-
-// Redirect if not logged in
-if (!isset($_SESSION['user_id'])) {
-    header('Location: ../index.php');
-    exit;
-}
-
-// Include auth functions
-require_once '../src/auth.php';
-
-// Fetch user by ID
-$user = getUserById($_SESSION['user_id']);
-if (!$user) {
-    // Invalid user, logout
-    session_destroy();
-    header('Location: ../index.php');
-    exit;
-}
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,6 +9,58 @@ if (!$user) {
   <!-- Tailwind CDN (for quick prototyping) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #001f54; /* Dark blue like your screenshot */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 50px;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px; /* Same realistic size as in your screenshot */
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57; /* Yellow hover effect */
+    }
     /* Small custom styles */
     .hero-bg { background-image: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.12)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&s='); background-size: cover; background-position: center; }
     .card-shadow { box-shadow: 0 6px 20px rgba(10,20,30,0.08); }
@@ -39,7 +68,23 @@ if (!$user) {
   </style>
 </head>
 <body class="antialiased text-slate-800 bg-slate-50">
-<?php include "../includes/header.php"; ?>
+
+  <!-- NAV -->
+<header>
+    <div class="logo">
+      <img src="paradise.jpg" alt="Logo"> <!-- Replace with your logo image -->
+      <span>PILIPINAS</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="pages/discover-philippines.html">Discover Philippines</a></li>    
+        <li><a href="event and festivals.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <section class="hero-bg min-h-screen flex items-center pt-20">
