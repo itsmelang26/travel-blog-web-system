@@ -24,14 +24,57 @@
       margin: 0;
       font-size: 24px;
     }
-    nav a {
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #001f54; /* Dark blue like your screenshot */
       color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 50px;
+      z-index: 1000;
     }
-    nav a:hover {
-      border-bottom: 2px solid white;
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px; /* Same realistic size as in your screenshot */
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57; /* Yellow hover effect */
     }
 
     /* Carousel Styles */
@@ -240,4 +283,5 @@
   </script>
 </body>
 </html>
+
 
